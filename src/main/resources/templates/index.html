@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot UI App</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Spring Boot UI App</h1>
+        <form th:action="@{/greet}" method="post">
+            <input type="text" name="name" placeholder="Enter your name" th:value="${name}" />
+            <button type="submit">Greet</button>
+        </form>
+        <p class="greeting" th:if="${greeting}" th:text="${greeting}"></p>
+    </div>
+</body>
+</html>
