@@ -15,4 +15,9 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Create Product via REST API
+        run: |
+          curl -X POST http://localhost:6364/api/products \
+            -H "Content-Type: application/json" \
+            -d '{"name":"Product from GitHub Actions","price":99.99}'
       - run: echo "🍏 This job's status is ${{ job.status }}."
