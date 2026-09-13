@@ -1,0 +1,10 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: 
+  workflow_dispatch: 
+jobs:
+  say-hello-inline-bash:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 Testing workflow-dispatch"
+      
