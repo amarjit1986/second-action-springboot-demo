@@ -1,0 +1,11 @@
+name: calling test Workflow
+on: workflow_call
+jobs: 
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print second greeting
+        run: echo "Hello World"
+      - name: Print goodbye
+        run: echo "Done - bye"
+      
